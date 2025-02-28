@@ -1,15 +1,17 @@
 import { FC } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import { CollectionsPage } from './modules/collections';
+import { CollectionDetails, CollectionsPage } from './modules/collections';
+import { Layout } from './shared/components/Layout';
 
-const App: FC = () => {
+export const App: FC = () => {
   return (
     <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-      <Routes>
-        <Route path='/collections' element={<CollectionsPage />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path='/' element={<CollectionsPage />} />
+          <Route path='/collection/:id' element={<CollectionDetails />} />
+        </Routes>
+      </Layout>
     </Router>
   );
 };
-
-export default App;
