@@ -48,7 +48,7 @@
     "test": "jest",
     "lint": "eslint src --ext .ts,.tsx",
     "format": "prettier --write src/**/*.{ts,tsx,css,scss}",
-    "deploy": "vite gh-pages"
+    "deploy": "vite build && gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
