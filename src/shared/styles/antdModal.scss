@@ -1,0 +1,23 @@
+$background-color: black;
+$title-color: #fff;
+$border-color: #fff;
+
+.ant-modal-root .ant-modal-mask {
+  background-color: rgb(0 0 0 / 81%);
+}
+
+.ant-modal .ant-modal-content {
+  background-color: $background-color;
+  border: 1px solid $border-color;
+}
+
+.ant-modal .ant-modal-content .ant-modal-header {
+  background-color: $background-color;
+}
+.ant-modal .ant-modal-content .ant-modal-title {
+  color: $title-color;
+}
+
+.ant-modal .ant-modal-content .ant-modal-close-x {
+  color: $title-color;
+}
