@@ -5,7 +5,10 @@ import { Layout } from './shared/components/Layout';
 
 export const App: FC = () => {
   return (
-    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <Router
+      basename='/magic'
+      future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
+    >
       <Layout>
         <Routes>
           <Route path='/' element={<CollectionsPage />} />
