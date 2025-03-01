@@ -1,0 +1,55 @@
+$padding-default: 20px;
+$gap-cards: 35px;
+$collection-width: 200px;
+$gap-columns: 20px;
+$columns-margin: 50px auto;
+$favorites-flex: 0.5;
+$cards-flex: 2;
+$favorite-bg-color: #333;
+$favorite-hover-bg-color: #fcfcfc8a;
+$favorite-min-height: 30px;
+$favorite-padding: 5px;
+$border-color: rgba(255, 255, 255, 0.596);
+
+.columns {
+  display: flex;
+  gap: $gap-columns;
+  margin: $columns-margin;
+}
+
+.favorites {
+  flex: $favorites-flex;
+}
+
+.favorites ul {
+  list-style: none;
+}
+
+.favorites ul li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: $favorite-bg-color;
+  min-height: $favorite-min-height;
+  align-items: center;
+  padding: $favorite-padding;
+  border-bottom: 1px solid $border-color;
+  cursor: pointer;
+}
+
+.favorites ul li:hover {
+  background-color: $favorite-hover-bg-color;
+}
+
+.cards {
+  flex: $cards-flex;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap-cards;
+  justify-content: left;
+}
+
+.cards > * {
+  flex: 0 0 $collection-width;
+  text-align: left;
+}
