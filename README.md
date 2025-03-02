@@ -1,5 +1,7 @@
 # magic
 
+- https://wojtec.github.io/magic/
+  
 # Setup
 
 - git clone https://github.com/Wojtec/magic.git
