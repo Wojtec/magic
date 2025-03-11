@@ -124,8 +124,11 @@ describe('CollectionDetails', () => {
         </Routes>
       </MemoryRouter>
     );
+
     const card2 = screen.getByText('Card 2');
-    fireEvent.click(card2);
+    fireEvent.mouseEnter(card2);
+    const favoriteButton = screen.getByText('Favorite', { selector: 'button' });
+    fireEvent.click(favoriteButton);
     expect(mockUseCollections().addCardToCollection).toHaveBeenCalledWith(
       '1',
       '2'
