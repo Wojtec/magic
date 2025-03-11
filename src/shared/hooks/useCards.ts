@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../store';
 import { fetchCards } from '../../store/cards/cardsThunks';
@@ -8,9 +9,9 @@ export const useCards = () => {
     (state: RootState) => state.cards
   );
 
-  const loadCards = () => {
+  const loadCards = useCallback(() => {
     dispatch(fetchCards());
-  };
+  }, [dispatch]);
 
   return {
     cards,
