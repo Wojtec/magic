@@ -53,7 +53,12 @@ export const CollectionDetails: FC = () => {
             <Card
               key={card.id}
               label={card.name}
-              background={<img src={`${card.imageUrl}`} alt='Card back' />}
+              background={
+                <img
+                  src={`${card.imageUrl || '/assets/Cardback.png'}`}
+                  alt='Card back'
+                />
+              }
               buttons={[
                 {
                   label: 'Favorite',
